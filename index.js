@@ -67,7 +67,7 @@ Fraction.prototype.toString = function () {
     return this.num + "/" + this.den
 }
 
-Fraction.prototype.add = function (second) {
+Fraction.prototype.sum= function (second) {
     var x = new Fraction((this.num * second.den) + (second.num * this.den), this.den * second.den)
     x.simplyfy()
     return x
