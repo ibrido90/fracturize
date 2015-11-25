@@ -1,7 +1,7 @@
 {
   "name": "fracturize",
-  "version": "0.1.1",
-  "description": "none yet",
+  "version": "0.1.2",
+  "description": "Simple,lightweight and straight-forward library for operation with Fractions",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
