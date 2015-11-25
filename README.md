@@ -1,4 +1,5 @@
 #Fracturize
+![Fracturize Logo](fracturize.png)
 ##Installing
         npm install https://github.com/ibrido90/fracturize.git
 ##Usage
@@ -59,7 +60,3 @@ Fraction.min(a,b).toString() // MAX(a,b) -> prints 1/2
 c.isBetween(a,b)// a < c < b  -> false
 one.isBetween(a,b)// a < one < b  -> true
 ```
-<hr />
-##TODO:
-- [ ] add function reciproc : 5/2 -> 2/5
-- [ ] add 0 check at den
