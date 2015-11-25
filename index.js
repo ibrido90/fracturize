@@ -8,8 +8,13 @@ function Fraction(num, den) {
         this.den = 1
     }
     else {
-        this.num = num,
-        this.den = den
+        if(den!=0){
+            this.num = num,
+            this.den = den
+        }
+        else {
+            throw new Error("Division by ZERO not Allowed!")
+        }
     }
 
     if (typeof num == "object" && typeof den == "number") {
@@ -64,6 +69,9 @@ Fraction.prototype.simplyfy = function () {
     }
 }
 Fraction.prototype.toString = function () {
+    return this.num + "/" + this.den
+}
+Fraction.prototype.inspect = function () {
     return this.num + "/" + this.den
 }
 

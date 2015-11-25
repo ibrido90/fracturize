@@ -7,15 +7,17 @@
 var Fraction = require('fracturize')
 
 var a = new Fraction(1,2)
-console.log(a.toString()) //prints 1/2
+console.log(a) //prints 1/2
 var b = new Fraction(5,2)
-console.log(b.toString()) //prints 5/2
+console.log(b) //prints 5/2
 var c = new Fraction(b,a)
-console.log(c.toString()) //prints 5/1
+console.log(c) //prints 5/1
 var c = new Fraction(a,b)
-console.log(c.toString()) //prints 1/5
+console.log(c) //prints 1/5
 var one = new Fraction()
-console.log(one.toString()) //prints 1/1
+console.log(one) //prints 1/1
+
+var wrong = new Fraction(1,0) -> Error
 ```
 *Fraction* accept as 0,1(just numerator) or 2(numerator,denominator) arguments. This could be at their times Fraction objects or numbers
 
