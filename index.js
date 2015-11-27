@@ -46,28 +46,11 @@ function Fraction(num, den) {
 
 }
 Fraction.prototype.simplyfy = function () {
-    var a = this.num
-    var b = this.den
-    if (a < 0)
-        a = a * (-1)
-    if (b < 0)
-        b = b * (-1)
-    var max = a
-    var min = b
-    if (a < b) {
-        max = b
-        min = a
-    }
-    while (min != 0) {
-        var t = min
-        min = max % min
-        max = t
-    }
-    if (max > 1) {
-        this.num /= max
-        this.den /= max
-    }
+    var m = mcd(this.num,this.den)
+    this.num = this.num / m
+    this.den = this.den / m
 }
+
 Fraction.prototype.toString = function () {
     return this.num + "/" + this.den
 }
@@ -140,8 +123,31 @@ function equal(a, b) {
         result = true
     return result
 }
+
+function mcd(a,b){
+    var r = a % b
+    while(r!=0){
+        a = b
+        b = r
+        r = a % b
+    }
+    return b
+}
+
+function fractionize(decimal){
+    var num = 1
+    var den = 1
+    while(decimal%10!=0){
+        decimal = decimal * 10
+        num = decimal
+        den = den * 10
+    }
+    return new Fraction(num,den)
+}
+
 module.exports = Fraction
 
+module.exports.fractionize = fractionize
 module.exports.max = max
 module.exports.min = min
 module.exports.equal = equal
