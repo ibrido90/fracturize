@@ -1,4 +1,6 @@
 var should = require('chai').should()
+var expect = require('chai').expect
+
 var Fraction = require('../index')
 
 describe('new Fraction(num,den)',function(){
@@ -10,6 +12,16 @@ describe('new Fraction(num,den)',function(){
 	})
 	it('with no arguments creates a fraction 1/1', function(){
 		new Fraction(1).toString().should.equal('1/1')
+	})
+	it('with 0 as den throw a Error', function(){
+		var z = false
+		try{
+			var g = new Fraction(1,0)
+		}
+		catch(err){
+			z = true
+		}
+		z.should.equal(true)
 	})
 })
 

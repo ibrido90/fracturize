@@ -1,6 +1,6 @@
 {
   "name": "fracturize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple,lightweight and straight-forward library for operation with Fractions",
   "main": "index.js",
   "scripts": {

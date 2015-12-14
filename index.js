@@ -13,7 +13,7 @@ function Fraction(num, den) {
             this.den = den
         }
         else {
-            //throw new Error("Division by ZERO not Allowed!")
+            throw new Error("Division by ZERO not Allowed!")
         }
     }
 
