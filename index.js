@@ -13,7 +13,7 @@ function Fraction(num, den) {
             this.den = den
         }
         else {
-            throw new Error("Division by ZERO not Allowed!")
+            //throw new Error("Division by ZERO not Allowed!")
         }
     }
 
@@ -57,6 +57,7 @@ Fraction.prototype.toString = function () {
 Fraction.prototype.inspect = function () {
     return this.num + "/" + this.den
 }
+
 
 Fraction.prototype.sum= function (second) {
     var x = new Fraction((this.num * second.den) + (second.num * this.den), this.den * second.den)

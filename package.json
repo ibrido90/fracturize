@@ -4,7 +4,7 @@
   "description": "Simple,lightweight and straight-forward library for operation with Fractions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/ibrido90/fracturize/issues"
   },
-  "homepage": "https://github.com/ibrido90/fracturize#readme"
+  "homepage": "https://github.com/ibrido90/fracturize#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
 }
