@@ -135,7 +135,7 @@ function mcd(a,b){
     return b
 }
 
-function fractionize(decimal){
+/*function fractionize(decimal){
     var num = 1
     var den = 1
     while(decimal%10!=0){
@@ -144,11 +144,11 @@ function fractionize(decimal){
         den = den * 10
     }
     return new Fraction(num,den)
-}
+}*/
 
 module.exports = Fraction
 
-module.exports.fractionize = fractionize
+/*module.exports.fractionize = fractionize*/
 module.exports.max = max
 module.exports.min = min
 module.exports.equal = equal
