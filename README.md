@@ -24,9 +24,11 @@ var wrong = new Fraction(1,0) -> Error
 ```
 *Fraction* accept 0,1(just numerator) or 2(numerator,denominator) arguments. This could be at their times Fraction objects or numbers
 
-**Note:** Fraction objects *always* simplify on creation:
+**Note:** in constructor you can specify the optional boolean *force* wich allow you to decide if force fraction semplification:
 ```js
 new Fraction(10,5) // 2/1
+new Fraction(10,5,false) // 2/1
+new Fraction(10,5,true) // 10/5
 ```
 ###Operations
 
