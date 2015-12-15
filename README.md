@@ -58,11 +58,11 @@ a.toString() // -> "1/2"
 ###Utilities
 ####Maximum
 ```js
-Fraction.max(a,b).toString() // MAX(a,b) -> prints 5/2
+Fraction.max(a,b) // MAX(a,b) -> prints 5/2
 ```
 ####Minimum
 ```js
-Fraction.min(a,b).toString() // MAX(a,b) -> prints 1/2
+Fraction.min(a,b) // MAX(a,b) -> prints 1/2
 ```
 ####isBetween
 ```js
