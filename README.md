@@ -2,6 +2,9 @@
 ![Fracturize Logo](fracturize.png)
 ##Installing
         npm install https://github.com/ibrido90/fracturize.git
+        npm install fracturize
+##Test
+        npm test
 ##Usage
 ```js
 var Fraction = require('fracturize')
@@ -19,34 +22,38 @@ console.log(one) //prints 1/1
 
 var wrong = new Fraction(1,0) -> Error
 ```
-*Fraction* accept as 0,1(just numerator) or 2(numerator,denominator) arguments. This could be at their times Fraction objects or numbers
+*Fraction* accept 0,1(just numerator) or 2(numerator,denominator) arguments. This could be at their times Fraction objects or numbers
 
 **Note:** Fraction objects *always* simplify on creation:
 ```js
-new Fraction(10,5).toString() // prints 2/1
+new Fraction(10,5) // 2/1
 ```
 ###Operations
 
 ####Sum
 ```js
-a.sum(b).toString() // a + b -> prints 3/1
+a.sum(b) // a + b -> 3/1
 ```
 ####Subtraction
 ```js
-a.sub(b).toString() // a - b -> prints -2/1
+a.sub(b)) // a - b -> -2/1
 ```
 ####Multiply
 ```js
-a.mul(b).toString() // a * b -> prints 5/4
+a.mul(b) // a * b -> 5/4
 ```
 ####Division
 ```js
-a.div(b).toString() // a / b -> prints 1/5
+a.div(b) // a / b -> 1/5
 ```
 ###Conversion
 You can convert a Fraction object to its relative value by executing it
 ```js
 console.log(a.exec()) // num / den -> prints 0.5
+```
+or to its string rappresentation with
+```js
+a.toString() // -> "1/2"
 ```
 ###Utilities
 ####Maximum
