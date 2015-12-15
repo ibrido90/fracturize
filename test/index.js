@@ -1,9 +1,8 @@
 var should = require('chai').should()
 
-
 var Fraction = require('../index')
 
-describe('new Fraction(num,den)',function(){
+describe('new Fraction(num,den,[force])',function(){
 	it('with both num and den creates a fraction num/den', function(){
 		new Fraction(5,3).toString().should.equal('5/3')
 	})
@@ -23,6 +22,13 @@ describe('new Fraction(num,den)',function(){
 		}
 		z.should.equal(true)
 	})
+	it('if #force is not passed or is passed as false the fraction simplifies',function(){
+		new Fraction(5,10).toString().should.equal(new Fraction(1,2).toString())
+		new Fraction(5,10,false).toString().should.equal(new Fraction(1,2).toString())
+	})
+	it('if #force is passed as true the fraction will be not simplified',function(){
+		new Fraction(5,10,true).toString().should.equal("5/10")
+	})
 })
 
 describe('toString()',function(){
@@ -33,7 +39,7 @@ describe('toString()',function(){
 })
 
 describe('simplify()',function(){
-	it('if possible simplfy the fraction', function(){
+	it('if possible simplify the fraction', function(){
 		var a = new Fraction(6,3)
 		var b = new Fraction(2,1)
 		a.toString().should.equal(b.toString())

@@ -1,4 +1,4 @@
-function Fraction(num, den) {
+function Fraction(num, den, force) {
     if (typeof num === "undefined" && typeof den === "undefined") {
         this.num = 1
         this.den = 1
@@ -17,17 +17,17 @@ function Fraction(num, den) {
         }
     }
 
-    if (typeof num == "object" && typeof den == "number") {
+    if (typeof num === "object" && typeof den === "number") {
         //(5/2)/4 -> 5/2 * 1/4 -> 5/8
         this.num = num.num
         this.den = num.den * this.den
     }
-    else if (typeof num == "number" && typeof den == "object") {
+    else if (typeof num === "number" && typeof den === "object") {
         //5/(3/2) -> 5 * 2/3 -> 10/3
         this.num = this.num * den.den
         this.den = den.num
     }
-    else if (typeof num == "object" && typeof den == "object") {
+    else if (typeof num === "object" && typeof den === "object") {
         //(5/3)/(3/2) -> 5/3 * 2/3 -> 10/9
         this.num = num.num * den.den
         this.den = num.den * den.num
@@ -41,8 +41,8 @@ function Fraction(num, den) {
         this.den *= -1
         this.num *= -1
     }
-
-    this.simplyfy()
+    if(typeof force === "undefined" || (typeof force === "boolean" && force == false))
+        this.simplyfy()
 
 }
 Fraction.prototype.simplyfy = function () {
